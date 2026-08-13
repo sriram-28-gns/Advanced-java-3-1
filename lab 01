@@ -22,19 +22,19 @@ public class StudentJDBCApp
             stmt.executeUpdate(createTable);
             System.out.println("Table created successfully.");
 
-            stmt.executeUpdate("INSERT INTO Student VALUES (1, 'Ravi', 'Hyderabad')");
-            stmt.executeUpdate("INSERT INTO Student VALUES (2, 'jaswanth', 'Chennai')");
-            stmt.executeUpdate("INSERT INTO Student VALUES (3, 'varma', 'Bangalore')");
+            stmt.executeUpdate("INSERT INTO Student VALUES (1, 'ravi', 'Hyderabad')");
+            stmt.executeUpdate("INSERT INTO Student VALUES (2, 'sita', 'Chennai')");
+            stmt.executeUpdate("INSERT INTO Student VALUES (3, 'kiran', 'Bangalore')");
             System.out.println("Initial records inserted.");
 
             System.out.println("\nInitial Records:");
             displayRecords(stmt);
 
-            stmt.executeUpdate("INSERT INTO Student VALUES (4, 'shashank', 'Pune')");
-            stmt.executeUpdate("INSERT INTO Student VALUES (5, 'karthik', 'Mumbai')");
+            stmt.executeUpdate("INSERT INTO Student VALUES (4, 'meena', 'Pune')");
+            stmt.executeUpdate("INSERT INTO Student VALUES (5, 'ramesh', 'Mumbai')");
             System.out.println("\nTwo new records inserted.");
 
-           stmt.executeUpdate("UPDATE Student SET Address = 'Bhimavaram' WHERE RollNo = 2");
+           stmt.executeUpdate("UPDATE Student SET Address = 'delhi' WHERE RollNo = 2");
            System.out.println("One record updated.");
 
             stmt.executeUpdate("DELETE FROM Student WHERE RollNo = 3");
@@ -67,9 +67,9 @@ OUTPUT:
 
 Initial Records:
 RollNo   Name       Address
- 1       Ravi       Hyderabad
- 2       jaswanth   Chennai
- 3       varma      Bangalore
+ 1       ravi       Hyderabad
+ 2       sita       Chennai
+ 3       kiran      Bangalore
 
  Two new records inserted.
  One record updated.
@@ -77,7 +77,7 @@ RollNo   Name       Address
 
  Final Records:
  RollNo    Name         Address
- 1         Ravi         Hyderabad
- 2         jaswanth     Bhimavaram
- 4         shashank     Pune
- 5         karthik      Mumbai
+ 1         ravi         Hyderabad
+ 2         sita         Delhi
+ 4         meena        Pune
+ 5         ramesh       Mumbai
